@@ -1,6 +1,60 @@
 services:
+  # Main Web Service - LLM.DAW API
   - type: web
-    name: daw
+    name: llm-daw-api
     env: docker
+    region: oregon
+    plan: starter
     dockerfilePath: ./Dockerfile
-    plan: free
+    dockerContext: .
+    branch: main
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHONPATH
+        value: /app
+      - key: RENDER
+        value: "true"
+    disk:
+      name: models-data
+      mountPath: /app/models
+      sizeGB: 5
+
+  # Redis - Task Queue & Cache
+  - type: redis
+    name: llm-daw-redis
+    ipAllowList: []
+    maxmemoryPolicy: allkeys-lru
+    plan: starter
+
+  # PostgreSQL - Memory Storage
+  - type: pserv
+    name: llm-daw-db
+    env: docker
+    region: oregon
+    plan: starter
+    dockerfilePath: ./docker/postgres/Dockerfile
+    database:
+      name: daw_memory
+      user: daw_user
+    envVars:
+      - key: POSTGRES_DB
+        value: daw_memory
+      - key: POSTGRES_USER
+        value: daw_user
+      - key: POSTGRES_PASSWORD
+        generateValue: true
+
+  # Neo4j - Signal Chain Graph (Optional - requires custom Docker)
+  # Uncomment when ready to use
+  # - type: web
+  #   name: llm-daw-neo4j
+  #   env: docker
+  #   region: oregon
+  #   plan: standard
+  #   dockerfilePath: ./docker/neo4j/Dockerfile
+  #   envVars:
+  #     - key: NEO4J_AUTH
+  #       value: neo4j/password
+  #     - key: NEO4J_PLUGINS
+  #       value: '["apoc"]'
