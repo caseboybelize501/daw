@@ -1,7 +1,7 @@
 fastapi==0.104.1
 uvicorn==0.24.0
 sounddevice==0.4.6
-rtmidi==1.5.0
+python-rtmidi==1.5.0
 librosa==0.10.1
 pyloudnorm==0.1.1
 mido==1.2.9
