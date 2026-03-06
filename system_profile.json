@@ -1,0 +1,202 @@
+{
+  "daw_info": [],
+  "plugin_catalog": [],
+  "hardware_info": {
+    "audio_interfaces": [
+      {
+        "name": "Microsoft Sound Mapper - Input",
+        "host_api": 0,
+        "vendor_id": "unknown",
+        "max_input_channels": 2,
+        "max_output_channels": 0
+      },
+      {
+        "name": "Microphone (USB CAMERA)",
+        "host_api": 0,
+        "vendor_id": "unknown",
+        "max_input_channels": 1,
+        "max_output_channels": 0
+      },
+      {
+        "name": "Microsoft Sound Mapper - Output",
+        "host_api": 0,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Headphones (Moukey MA20-2)",
+        "host_api": 0,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Odyssey G93SC (NVIDIA High Defi",
+        "host_api": 0,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Primary Sound Capture Driver",
+        "host_api": 1,
+        "vendor_id": "unknown",
+        "max_input_channels": 2,
+        "max_output_channels": 0
+      },
+      {
+        "name": "Microphone (USB CAMERA)",
+        "host_api": 1,
+        "vendor_id": "unknown",
+        "max_input_channels": 1,
+        "max_output_channels": 0
+      },
+      {
+        "name": "Primary Sound Driver",
+        "host_api": 1,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Headphones (Moukey MA20-2)",
+        "host_api": 1,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Odyssey G93SC (NVIDIA High Definition Audio)",
+        "host_api": 1,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Headphones (Moukey MA20-2)",
+        "host_api": 2,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Odyssey G93SC (NVIDIA High Definition Audio)",
+        "host_api": 2,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Microphone (USB CAMERA)",
+        "host_api": 2,
+        "vendor_id": "unknown",
+        "max_input_channels": 1,
+        "max_output_channels": 0
+      },
+      {
+        "name": "Headphones ()",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Headphones ()",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Output (@System32\\drivers\\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0\r\n;(iPhone))",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 1
+      },
+      {
+        "name": "Input (@System32\\drivers\\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0\r\n;(iPhone))",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 1,
+        "max_output_channels": 0
+      },
+      {
+        "name": "Output (NVIDIA High Definition Audio)",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Headset (@System32\\drivers\\bthhfenum.sys,#2;%1 Hands-Free%0\r\n;(HDJ-F10))",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 1
+      },
+      {
+        "name": "Headset (@System32\\drivers\\bthhfenum.sys,#2;%1 Hands-Free%0\r\n;(HDJ-F10))",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 1,
+        "max_output_channels": 0
+      },
+      {
+        "name": "Headphones ()",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Input ()",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 2,
+        "max_output_channels": 0
+      },
+      {
+        "name": "Room Speaker ()",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 2
+      },
+      {
+        "name": "Headset (@System32\\drivers\\bthhfenum.sys,#2;%1 Hands-Free%0\r\n;(INZONE H9 / INZONE H7))",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 0,
+        "max_output_channels": 1
+      },
+      {
+        "name": "Headset (@System32\\drivers\\bthhfenum.sys,#2;%1 Hands-Free%0\r\n;(INZONE H9 / INZONE H7))",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 1,
+        "max_output_channels": 0
+      },
+      {
+        "name": "Microphone (USB CAMERA)",
+        "host_api": 3,
+        "vendor_id": "unknown",
+        "max_input_channels": 1,
+        "max_output_channels": 0
+      }
+    ],
+    "midi_controllers": [],
+    "sample_rate_supported": [
+      44100,
+      48000,
+      96000
+    ],
+    "bit_depth_supported": [
+      24,
+      32
+    ]
+  },
+  "sample_catalog": [],
+  "model_files": []
+}

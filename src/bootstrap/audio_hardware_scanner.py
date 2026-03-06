@@ -30,17 +30,23 @@ async def scan_audio_hardware() -> Dict:
             })
     
     # MIDI controllers
-    midi = rtmidi.RtMidiIn()
-    for i in range(midi.getPortCount()):
-        try:
-            port_name = midi.getPortName(i)
-            if port_name:
-                midi_controllers.append({
-                    "name": port_name,
-                    "port_number": i
-                })
-        except Exception as e:
-            print(f"Error reading MIDI port {i}: {e}")
+    midi_controllers = []
+    try:
+        midi_in = rtmidi.MidiIn()
+        port_count = midi_in.get_port_count()
+        for i in range(port_count):
+            try:
+                port_name = midi_in.get_port_name(i)
+                if port_name:
+                    midi_controllers.append({
+                        "name": port_name,
+                        "port_number": i
+                    })
+            except Exception as e:
+                print(f"Error reading MIDI port {i}: {e}")
+        midi_in.close_port()
+    except Exception as e:
+        print(f"MIDI scan error (non-critical): {e}")
     
     return {
         "audio_interfaces": audio_interfaces,

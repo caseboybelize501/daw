@@ -1,34 +1,27 @@
 import json
 from typing import List, Dict
 from pathlib import Path
+from pydantic import BaseModel
 
-class AudioSystemProfile:
-    def __init__(self, daw_info: List[Dict], plugin_catalog: List[Dict], hardware_info: Dict, sample_catalog: List[Dict], model_files: List[Dict]):
-        self.daw_info = daw_info
-        self.plugin_catalog = plugin_catalog
-        self.hardware_info = hardware_info
-        self.sample_catalog = sample_catalog
-        self.model_files = model_files
+class AudioSystemProfile(BaseModel):
+    daw_info: List[Dict]
+    plugin_catalog: List[Dict]
+    hardware_info: Dict
+    sample_catalog: List[Dict]
+    model_files: List[Dict]
         
     @classmethod
     async def load(cls):
         try:
             with open("system_profile.json", "r") as f:
                 data = json.load(f)
-                return cls(**data)
+                return cls.model_validate(data)
         except Exception as e:
             print(f"Error loading profile: {e}")
             return None
-    
+
     async def save(self):
-        data = {
-            "daw_info": self.daw_info,
-            "plugin_catalog": self.plugin_catalog,
-            "hardware_info": self.hardware_info,
-            "sample_catalog": self.sample_catalog,
-            "model_files": self.model_files
-        }
-        
+        data = self.model_dump()
         with open("system_profile.json", "w") as f:
             json.dump(data, f, indent=2)
         
